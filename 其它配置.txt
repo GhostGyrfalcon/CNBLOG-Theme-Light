@@ -1,0 +1,25 @@
+# 侧边栏公告
+<div style="width: 100%;text-align: center;">
+    <img style="border-radius: 50%;border: 1px solid #eee;" src="https://pic.cnblogs.com/face/979767/20180915094029.png" alt="">
+</div>
+<div>联系： Q-1214966109</div>
+
+
+# 页首 HTML
+<script>
+    // 菜单新加标签
+    var indexEle = '<li><a target="_blank" class="menu" href="https://www.cnblogs.com/Dy1an">首页</a></li>';
+    var githubEle = '<li><a target="_blank" class="menu" href="https://github.com/KU4NG">GITHUB</a></li><li><a target="_blank" class="menu" href="https://github.com/KU4NG">主题</a></li>';
+    document.getElementById('navList').insertAdjacentHTML("beforeEnd", indexEle);
+    document.getElementById('navList').insertAdjacentHTML("afterBegin", githubEle);
+</script>
+
+# 页脚 HTML
+<script>
+    window.onload =  function() {
+        var ele = document.getElementById('q');
+        console.log(ele);
+        ele.setAttribute("placeholder","搜索相关博客...");
+        ele.setAttribute("autocomplete","off");
+    }
+</script>

@@ -1,0 +1,674 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    font-family: PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif, Simsun;
+}
+
+div {
+    border-radius: 0 !important
+}
+
+a {
+    text-decoration: none !important
+}
+
+a:link {
+    text-decoration: none !important
+}
+
+a:visited {
+    text-decoration: none !important
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+a:active {
+    text-decoration: none !important
+}
+
+body {
+    background-color: #eeeeee;
+}
+
+/* 头部栏 */
+#header {
+    min-width: 1200px;
+    height: 50px;
+    width: 100%;
+    display: block;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05)
+}
+
+#header * {
+    color: #333 !important;
+}
+
+/* 头部栏：左边logo */
+#header h1 {
+    float: left;
+    width: 200px;
+    padding-left: 20px;
+}
+
+#header h1 a {
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px !important;
+    font-weight: bolder !important;
+    letter-spacing: 3px !important;
+}
+
+#header #lnkBlogLogo {
+    display: none;
+}
+
+#header h2 {
+    display: none;
+}
+
+
+/* 头部栏：右边列表 */
+#header li {
+    list-style: none;
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+
+#header li:hover {
+    cursor: pointer;
+}
+
+#header li a {
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 0 20px;
+}
+
+#header li a::before,
+#header li a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+#header li a::before {
+    border-top: 2px solid #333;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+
+#header li:hover a::before,
+#header li:hover a::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+#header .blogStats {
+    display: none;
+}
+
+#header #navigator {
+    margin-right: 200px;
+}
+
+/* 头部栏：搜索 */
+#sidebar_search {
+    display: block;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 48px;
+    line-height: 48px;
+}
+
+#sidebar_search h3 {
+    display: none;
+}
+
+#sidebar_search .div_my_zzk {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#sidebar_search .input_my_zzk {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+    border: none;
+    cursor: text;
+    font-size: 12px;
+}
+
+#sidebar_search .btn_my_zzk {
+    background-color: #009688;
+    color: #fff !important;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#sidebar_search input:focus {
+    outline: none;
+}
+
+#sidebar_search input {
+    outline: none;
+    border: 0;
+}
+
+
+/* 主体 */
+#main {
+    width: 1200px;
+    margin: 10px auto;
+}
+
+#main #mainContent {
+    width: 960px;
+    background-color: white;
+    padding: 20px;
+    float: left;
+}
+
+#main #mainContent .day {
+    position: relative;
+    border: 1px dashed lightgrey;
+    padding: 15px;
+    margin: 0 0 15px 0;
+}
+
+#main #mainContent .day .dayTitle {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-color: #eeeeee;
+    width: 110px;
+    text-align: right;
+    padding: 0 10px 3px 10px;
+}
+
+#main #mainContent .day .dayTitle a {
+    font-size: 12px;
+    color: #333333;
+    opacity: 0.6;
+}
+
+#main #mainContent .day .postTitle a {
+    position: relative;
+    left: -18px;
+    border-left: 4px solid #dc3545;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #333333;
+}
+
+#main #mainContent .day .postTitle a:hover {
+    color: #003366;
+}
+
+#main #mainContent .day .postCon {
+    padding: 10px;
+}
+
+#main #mainContent .day .postCon .c_b_p_desc {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    line-height: 2;
+    width: 900px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#main #mainContent .day .postDesc {
+    font-size: 12px;
+    opacity: 0.6;
+    text-align: right;
+}
+
+#main #mainContent .day .postDesc a {
+    font-size: 12px;
+    color: #dc3545;
+}
+
+#main #mainContent .day .postSeparator {
+    height: 15px;
+    border-top: 1px dashed lightgrey;
+    border-bottom: 1px dashed lightgrey;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    margin: 15px -17px;
+}
+
+
+/* 页码 */
+#main #mainContent #nav_next_page a {
+    font-size: 12px;
+    color: #333333;
+}
+
+#main #mainContent .topicListFooter {
+    margin-right: 0;
+}
+
+#main #mainContent .pager {
+    font-size: 12px;
+    color: #dc3545;
+    text-align: right;
+}
+
+#main #mainContent .pager a {
+    font-size: 12px;
+    color: gray;
+    border: 1px solid lightgray;
+}
+
+#main #mainContent #homepage_top_pager {
+    display: none;
+}
+
+/* 侧边栏 */
+#sideBar {
+    width: 200px;
+    float: right;
+}
+
+#sideBar #sideBarMain {
+    width: 190px;
+    float: right;
+}
+
+#sideBar #sideBarMain * {
+    color: #333;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+#sideBar #sideBarMain #sidebar_news {
+    background-color: white;
+}
+
+#sideBar #sideBarMain #sidebar_news h3 {
+    background-color: #dc3545;
+    color: white;
+    border-bottom: 1px solid #eeeeee;
+    padding: 5px 15px;
+    font-size: 14px;
+    /* font-weight: bolder; */
+}
+
+#sideBar #sideBarMain #sidebar_news #blog-news {
+    padding: 15px 15px 0 15px;
+}
+
+#sideBar #sideBarMain #sidebar_news #blog-news * {
+    line-height: 25px;
+}
+
+#sideBar #sideBarMain #sidebar_news #blog-news #profile_block {
+    margin-top: 0;
+}
+
+#sideBar #sideBarMain #sidebar_categories {
+    background-color: white;
+}
+
+#sideBar #sideBarMain #sidebar_categories h3 {
+    padding: 20px 15px 5px 15px;
+}
+
+#sideBar #sideBarMain #sidebar_categories ul {
+    list-style: none;
+    counter-reset: headings;
+    padding: 0 15px 15px 15px;
+}
+
+#sideBar #sideBarMain #sidebar_categories ul li {
+    line-height: 30px;
+    border-bottom: 1px dashed #eeeeee;
+}
+
+#sideBar #sideBarMain #sidebar_categories ul li:before {
+    counter-increment: headings;
+    content: counter(headings, decimal) ".";
+    font-family: "Bree Serif", serif;
+
+}
+
+#sideBar #sideBarMain #sidebar_categories ul li a {
+    letter-spacing: 1px;
+}
+
+#sideBar #sideBarMain #sidebar_categories ul li a:hover {
+    color: #dc3545;
+}
+
+/* 页面底部 */
+#footer {
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+#footer br {
+    display: none;
+}
+
+/* 分类页面 */
+#main #mainContent .entrylist h1 {
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+
+#main #mainContent .entrylistItem {
+    position: relative;
+    border: 1px dashed lightgrey;
+    padding: 15px;
+    margin: 0 0 15px 0;
+}
+
+#main #mainContent .entrylistItem .entrylistPosttitle a {
+    position: relative;
+    left: -18px;
+    border-left: 4px solid #dc3545;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #333333;
+}
+
+#main #mainContent .entrylistItem .entrylistPosttitle a:hover {
+    color: #003366;
+}
+
+#main #mainContent .entrylistItem .entrylistPostSummary {
+    padding: 10px;
+}
+
+#main #mainContent .entrylistItem .entrylistPostSummary .c_b_p_desc {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    line-height: 2;
+    width: 900px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#main #mainContent .entrylistItem .entrylistItemPostDesc {
+    font-size: 12px;
+    opacity: 0.6;
+    text-align: right;
+}
+
+#main #mainContent .entrylistItem .entrylistItemPostDesc a {
+    font-size: 12px;
+    color: #dc3545;
+}
+
+
+/* 详情页 */
+#main #post_detail {
+    padding: 30px;
+    position: relative;
+}
+
+#main #post_detail .postTitle {
+    padding: 0 0 50px 0;
+    text-align: center;
+    border-bottom: 1px dotted #ccc;
+}
+
+#main #post_detail .postTitle a {
+    font-size: 20px;
+    color: #333;
+    font-weight: bolder;
+}
+
+#main #post_detail .postDesc {
+    position: absolute;
+    width: calc(100% - 60px);
+    top: 85px;
+    text-align: center;
+}
+
+#main #post_detail .postDesc {
+    font-size: 12px;
+    line-height: 25px;
+    color: #333;
+    opacity: 0.7;
+}
+
+#main #post_detail .postDesc * {
+    font-size: 12px;
+    color: #333;
+    opacity: 0.7;
+}
+
+#main #post_detail .postBody #cnblogs_post_body {
+    margin-top: 30px;
+    padding: 15px;
+}
+
+/* 详情页文字属性 */
+#main #post_detail .postBody #cnblogs_post_body p,
+#main #post_detail .postBody #cnblogs_post_body span {
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: SimHei;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* 详情页图片属性 */
+#main #post_detail .postBody #cnblogs_post_body img {
+    margin: 15px 0;
+    max-width: 880px;
+}
+
+/* 详情页表格属性 */
+#main #post_detail .postBody #cnblogs_post_body table {
+    width: 100%;
+    margin: 15px 0;
+}
+
+#main #post_detail .postBody #cnblogs_post_body table * {
+    font-size: 12px;
+}
+
+#main #post_detail .postBody #cnblogs_post_body table th {
+    padding: 6px 10px !important;
+    text-align: left;
+    background-color: #1c2b36;
+    color: white;
+    border-color: #1c2b36;
+}
+
+#main #post_detail .postBody #cnblogs_post_body table td {
+    padding: 6px 10px !important;
+    text-align: left;
+}
+
+/* 详情页代码 */
+#main #post_detail .postBody #cnblogs_post_body .cnblogs_code {
+    padding: 15px 20px;
+    border: none;
+}
+
+#main #post_detail .postBody #cnblogs_post_body .cnblogs_code_toolbar {
+    display: none;
+}
+
+#main #post_detail .postBody #cnblogs_post_body blockquote {
+    border: none;
+    background-color: #eeeeee;
+    border-left: 5px solid #009688;
+}
+
+#main #post_detail .postBody #cnblogs_post_body blockquote * {
+    font-size: 12px;
+    color: #333;
+}
+
+#main #post_detail .postBody #blog_post_info_block {
+    padding: 15px;
+}
+
+
+#main #post_detail .postBody #blog_post_info_block * {
+    font-size: 12px;
+    color: #333;
+}
+
+#main #post_detail .postBody #blog_post_info_block #author_profile_info {
+    display: none;
+}
+
+#main #post_detail .postBody #blog_post_info_block #author_profile_detail {
+    display: none;
+}
+
+#main #post_detail .postBody #blog_post_info_block #blog_post_info #green_channel {
+    float: left;
+    border: none;
+}
+
+#main #post_detail .postBody #blog_post_info_block #blog_post_info #div_digg {
+    float: right;
+}
+
+#main #comment_form {
+    padding: 45px !important;
+}
+
+#main #comment_form * {
+    font-size: 12px;
+}
+
+#main #comment_form .comment_textarea {
+    width: 100%;
+}
+
+#main #blog-comments-placeholder {
+    padding: 0 45px !important;
+}
+
+#main #blog-comments-placeholder * {
+    font-size: 12px;
+    color: #333;
+}
+
+#main #blog-comments-placeholder .feedbackItem {
+    padding: 15px 0;
+    border-bottom: 1px dashed #eeeeee;
+}
+
+
+#main #blog-comments-placeholder .feedbackListSubtitle {
+    line-height: 30px;
+}
+
+#main #blog-comments-placeholder a {
+    color: #009688;
+}
+
+#main #blog-comments-placeholder div {
+    line-height: 30px;
+}
+
+#main #blog-comments-placeholder .feedbackManage {
+    float: right;
+}
+
+#main #blog-comments-placeholder .feedbackListSubtitle .layer {
+    color: #003366;
+    font-weight: bolder;
+}
+
+#main #blog-comments-placeholder .feedbackListSubtitle .louzhu {
+    color: white;
+    background-color: #1c2b36;
+    padding: 0 10px;
+    margin: 0 -8px;
+}
+
+#main #blog-comments-placeholder br {
+    display: none;
+    padding-left: 20px;
+}
+
+#main #commentbox_opt #btn_comment_submit {
+    background-color: #009688;
+    color: #fff !important;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    width: auto;
+}
+
+#main #commentbox_opt a {
+    color: #dc3545;
+}
+
+.my-title {
+    font-size: 18px !important;
+    font-weight: bolder;
+    font-family: simsun !important;
+    border-left: 5px solid #dc3545;
+    padding-left: 10px;
+    line-height: 20px !important;
+    position: relative;
+    left: -15px;
+}
+
+
+
+
+/* 广告 */
+#comment_nav {
+    display: none;
+}
+
+#ad_t2 {
+    display: none;
+}
+
+.c_ad_block {
+    display: none;
+}
+
+#under_post_news {
+    display: none;
+}
