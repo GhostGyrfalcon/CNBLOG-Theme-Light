@@ -412,6 +412,10 @@ body {
     color: #003366;
 }
 
+#main .entrylistPosttitle span {
+    font-weight: bolder;
+}
+
 #main #mainContent .entrylistItem .entrylistPostSummary {
     padding: 10px;
 }
